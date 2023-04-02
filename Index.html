@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"
+    defer></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Wanderlustly- Travel with us</title>
+
+
+
+<style>
+
+
+.card{
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+
+.footerComponent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+</style>
+
+
+
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <div class="container">
+      <a href="#" class="navbar-brand text-uppercase">Wanderlustly</a>
+
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#list1">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="list1">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a href="#packages" class="nav-link">Packages</a>
+          </li>
+          <li class="nav-item">
+            <a href="#faq" class="nav-link">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- MODAL -->
+    <div class="modal fade" tabindex="-1" id="booking-modal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Book a tour</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- FORM -->
+            <form>
+              <div class="row g-2">
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <input class="form-control" id="#email-input" type="email" placeholder="name@example.com">
+                    <label class="form-label" for="email-input">Email address</label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-floating">
+                    <select id="floating-select" class="form-select">
+                      <option>Sindh, PAKISTAN- $120</option>
+                      <option>Punjab, PAKISTAN- - $125</option>
+                      <option>khyber pakhtunkhawa, PAKISTAN- $140</option>
+                    </select>
+                    <label for="floating-select">Pick a tour</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO CAROUSEL -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active c-item">
+          <img src="https://c1.wallpaperflare.com/preview/41/865/241/tree-lake-pakistan-nature.jpg"
+            class="d-block w-100 c-img" alt="Carousel image 1" style="height: 50vh !important;">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="mt-5 text-uppercase fs-3">Discover the PAKISTAN</p>
+            <h1 class="display-1 fw-bolder">Wanderlustly Tours</h1>
+            <button class="btn btn-primary mt-5 fs-5 px-4 py-2" data-bs-toggle="modal"
+              data-bs-target="#booking-modal">Book a tour</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://free4kwallpapers.com/uploads/originals/2022/04/14/pakistan-hunza-valley-wallpaper.jpg"
+            class="d-block w-100 c-img" alt="Carousel image 2"  style="height: 50vh !important;">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">The season has arrived</p>
+            <p class="display-1 fw-bolder text-capitalize">3 available tours</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+              data-bs-target="#booking-modal">Book a tour</button>
+          </div>
+        </div>
+        <div class="carousel-item c-item">
+          <img src="https://images8.alphacoders.com/605/605369.jpg"
+            class="d-block w-100 c-img" alt="Carousel image 3"  style="height: 50vh !important;">
+          <div class="carousel-caption top-0 mt-4">
+            <p class="text-uppercase fs-3 mt-5">Destination activities</p>
+            <p class="display-1 fw-bolder text-capitalize">Go glacier hiking</p>
+            <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal"
+              data-bs-target="#booking-modal">Book a tour</button>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- OVERVIEW SECTION -->
+    <section class="overview fs-4">
+      <div class="container h-100 d-flex align-items-center">
+        <div class="row text-center w-100">
+          <div class="col-xl-4 text-capitalize">
+            <i class="bi bi-airplane-fill me-2"></i>
+            3 amazing destinations
+          </div>
+          <div class="col-xl-4">
+            <i class="bi bi-wallet-fill me-2"></i>
+            Only pay 5% up front
+          </div>
+          <div class="col-xl-4">
+            <i class="bi bi-patch-check-fill me-2"></i>
+            1000's of customers
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES SECTION -->
+    <section class="pt-md-5" id="packages">
+      <div class="container">
+        <h2 class="text-center my-5">Packages</h2>
+
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="https://wallpapers.com/images/featured/05x5929jya0yamcv.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Sindh, PAKISTAN- $120</h5>
+                <p class="card-text">Karachi is a vibrant city with plenty to offer tourists. 
+                The city is known for its diverse culture, rich history, and stunning architecture.
+                Beach lovers can enjoy the beautiful Karachi Beach, while foodies can indulge in the city's famous street food scene. Karachi is also a great place to shop, with markets like the Empress Market and the Tariq Road Market offering a wide range of goods. Despite some challenges, Karachi is a fascinating and exciting destination for tourists looking to experience Pakistani culture and hospitality.!</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book
+                  tour</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="https://free4kwallpapers.com/uploads/originals/2019/10/14/lahore-pakistan-wallpaper.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Punjab, PAKISTAN - $125</h5>
+                <p class="card-text">Lahore is a historic and cultural city located in the Punjab province of Pakistan. It is known for its magnificent Mughal-era architecture, delicious food, and vibrant markets. One of the most famous attractions in Lahore is the Badshahi Mosque, which is one of the largest mosques in the world and a masterpiece of Mughal architecture. The Lahore Fort, which is a UNESCO World Heritage Site, is also a must-visit for tourists interested in history and culture.It is also known for its colorful festivals, such as the Basant Kite, Lahore Literary Festival, which attract visitors from all over the world. With its rich history, vibrant culture, and warm hospitality</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book
+                  tour</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="https://e0.pxfuel.com/wallpapers/730/654/desktop-wallpaper-upper-sonmarg-kashmir-wildflowers-clouds-mountains-sky-water-reflections.jpg"
+                class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">khyber pakhtunkhawa, PAKISTAN- $140</h5>
+                <p class="card-text">Pakistan's Khyber Pakhtunkhwa (KPK) province is renowned for both its stunning natural surroundings and its illustrious cultural past.</p>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#booking-modal">Book
+                  tour</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-md-5" id="faq">
+      <h2 class="my-5 text-center">FAQ</h2>
+
+      <div class="container">
+        <div class="accordion w-75 mx-auto" id="accordionExample">
+          <div clss="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
+                What is the best time of year to visit this destination?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                The best time to visit this destination is during the months of Dec till Feb, when the weather is 
+                cold and there are hiking and other these type of activities.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                How do I get from the airport to my hotel or resort?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                There are several transportation options available from the airport. We recommend that you [insert recommendation here, such as pre-booking a shuttle or taxi in advance to avoid long lines and wait times]. Additionally, if you are staying at one of
+                 our partner hotels or resorts, they may offer a complimentary shuttle service.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Can I cancel after booking?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+              data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                Our cancellation policy varies depending on the type of service you have booked.
+                 Please refer to our Terms and Conditions page for specific details on cancellations and refunds. Generally, if you cancel within [insert number of days or hours here] of your scheduled activity or service, you may be eligible for a partial or full refund. However, if you cancel within [insert shorter time frame here], you may not be eligible for a refund. We understand that travel plans can change unexpectedly, so we always recommend that you review our cancellation 
+                 policy carefully before booking and consider purchasing travel insurance for added protection.
+
+
+
+
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <form>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Name</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label for="emailInput">Email</label>
+                        <input type="email" class="form-control" id="emailInput" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label for="messageTextarea">Message</label>
+                        <textarea class="form-control" id="messageTextarea" rows="5" placeholder="Enter your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            
+        </div>
+        <footer class="bg-dark text-light text-center py-5 mt-5 footerComponent">
+            <p class="display-5 mb-3">WanderlustlyTours</p>
+            <small class="text-white-50"> ~UNZILA RASHEED</small>
+             <div class="col-md-6 mb-4">
+                        <p style="font-size: 12px; margin-top: 10px;">Contact Info</p>
+                        <ul class="list-unstyled">
+                            <li style="font-size: 12px; margin-top: -15px;">123 main karachi street</li>
+                            <li  style="font-size: 12px;">contact@Wanderlustly.com</li>
+                            <li  style="font-size: 12px;">+23 (555) -1234</li>
+                        </ul>
+                    </div>
+          </footer>
+</body>
+</html>
+ 
